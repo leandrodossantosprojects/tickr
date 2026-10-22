@@ -31,12 +31,16 @@ export const createList = (name, category) => {
     if (todoIndex === -1) return;
     todos.splice(todoIndex, 1);
   };
+  const showTodos = () => {
+    console.log(todos);
+  };
 
   return {
     getTodos,
     getName,
     insertTodo,
     deleteTodo,
+    showTodos,
   };
 };
 
