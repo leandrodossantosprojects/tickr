@@ -16,12 +16,16 @@ export const lists = () => {
 };
 
 export const createList = (name, category) => {
+  const listData = {
+    name: name,
+    category: category,
+  };
   const todos = [];
   const getTodos = () => {
     return todos;
   };
-  const getName = () => {
-    return name;
+  const getData = () => {
+    return listData;
   };
   const insertTodo = (todo) => {
     todos.push(todo);
@@ -37,7 +41,7 @@ export const createList = (name, category) => {
 
   return {
     getTodos,
-    getName,
+    getData,
     insertTodo,
     deleteTodo,
     showTodos,
