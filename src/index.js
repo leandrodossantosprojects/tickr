@@ -1,4 +1,6 @@
+import "./styles.css";
 import { lists, createList, createToDo } from "./modules/to-do-logic.js";
+import renderUI from "./modules/ui.js";
 
 //const lista = lists.insertList(createList("prueba", "pruebas"));
 const misListas = lists();
@@ -17,3 +19,5 @@ console.log(tareaDePrueba);
 
 misListas.getLists()[0].insertTodo(tareaDePrueba);
 console.log(misListas.getLists()[0].getTodos()[0].getId());
+
+renderUI();

@@ -1,0 +1,97 @@
+:root {
+  /* Primary: The Oregon Blue */
+  --primary-100: #f2f6ff;
+  --primary-200: #c6d9fe;
+  --primary-300: #99bffb;
+  --primary-400: #6aa6f1;
+  --primary-500: #3c8dde;
+  --primary-600: #1b6eb0;
+  --primary-700: #0c5582;
+  --primary-800: #063b54;
+  --primary-900: #031d26;
+
+  /* Accent: Naga Viper Pepper */
+  --accent-100: #fff5f2;
+  --accent-200: #ffcbc0;
+  --accent-300: #fd9b8e;
+  --accent-400: #f9645b;
+  --accent-500: #f02929;
+  --accent-600: #bd0e0e;
+  --accent-700: #8b0303;
+  --accent-800: #590000;
+  --accent-900: #260000;
+
+  /* Neutral */
+  --neutral-100: #fafbfc;
+  --neutral-200: #e8eaee;
+  --neutral-300: #d6dae0;
+  --neutral-400: #c5cbd2;
+  --neutral-500: #b5bcc4;
+  --neutral-600: #8f969d;
+  --neutral-700: #6b7175;
+  --neutral-800: #464b4e;
+  --neutral-900: #222526;
+}
+
+@import "@fontsource/archivo-black";
+@import "@fontsource-variable/syne";
+
+* {
+  margin: 0;
+  box-size: border-box;
+  border: none;
+  outline: none;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+header {
+  width: 100%;
+  height: 50px;
+  background-color: var(--primary-500);
+  color: var(--neutral-100);
+  text-align: center;
+  vertical-align: center;
+  padding-top: 10px;
+  .title {
+    font-size: 2rem;
+    font-family: "Archivo Black", sans-serif;
+  }
+}
+
+main {
+  height: 100%;
+  width: 100%;
+
+  .main-container {
+    background-color: var(--neutral-100);
+    height: 100%;
+  }
+
+  .sidebar {
+    height: 100%;
+    width: 150px;
+    background-color: var(--primary-400);
+    display: flex;
+    flex-direction: column;
+    justify-items: space-beetwen;
+    align-items: start-end;
+
+    button {
+      background-color: var(--primary-400);
+      font-size: 1rem;
+      font-weight: bold;
+      color: var(--neutral-100);
+      margin-top: 10px;
+      font-family: "Archivo Black", sans-serif;
+      font-weight: 200;
+    }
+  }
+}
+
+.sidebar + button {
+  margin-top: 10px;
+}
