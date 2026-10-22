@@ -1,24 +1,35 @@
-export const renderUI = () => {
+export default () => {
   const body = document.querySelector("body");
   const header = document.createElement("header");
   const main = document.createElement("main");
-
   const sideBar = document.createElement("div");
   const mainContainer = document.createElement("div");
-
   const title = document.createElement("h1");
 
-  header.setAttribute(
-    "style",
-    "height:50px;width:100vw;background-color:navy;text-align:center;vertical-align:center;margin:0;padding:0",
-  );
+  header.className = "header";
   title.textContent = "Tickr";
-  title.setAttribute("style", "font-size:2rem;color:white");
-  sideBar.setAttribute("style", "width:200px;background-color:grey");
+  title.className = "title";
+  sideBar.className = "sidebar";
+  mainContainer.className = "main-container";
 
   main.appendChild(sideBar);
   main.appendChild(mainContainer);
   header.appendChild(title);
   body.appendChild(header);
   body.appendChild(main);
+
+  const listsBtn = document.createElement("button");
+  const categoriesBtn = document.createElement("button");
+  const aboutBtn = document.createElement("button");
+  const homeBtn = document.createElement("button");
+
+  listsBtn.textContent = "Lists";
+  categoriesBtn.textContent = "Categories";
+  aboutBtn.textContent = "About";
+  homeBtn.textContent = "Home";
+
+  sideBar.appendChild(listsBtn);
+  sideBar.appendChild(categoriesBtn);
+  sideBar.appendChild(aboutBtn);
+  sideBar.appendChild(homeBtn);
 };
