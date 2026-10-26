@@ -56,14 +56,13 @@ export const createList = (name = "list", category = "default") => {
   };
 };
 
-export const createToDo = (title, description, dueDate, priority, list) => {
+export const createToDo = (title, description, dueDate, priority) => {
   const data = {
     id: uuidv4(),
     title: title,
     description: description,
     dueDate: dueDate,
     priority: priority,
-    list: list,
   };
   const getData = () => {
     return { ...data };
@@ -80,15 +79,11 @@ export const createToDo = (title, description, dueDate, priority, list) => {
   function changePriority(value) {
     return (data.priority = value);
   }
-  function changeList(value) {
-    return (data.list = value);
-  }
   return {
     changeTitle,
     changeDesc,
     changeDueDate,
     changePriority,
-    changeList,
     getData,
   };
 };
